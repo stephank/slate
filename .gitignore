@@ -6,10 +6,9 @@ build/output
 build/Release/*.tar.gz
 build/Release/VERSION
 build/Release/appcast.xml
-Slate.xcodeproj/jigish.mode1v3
-Slate.xcodeproj/jigish.pbxuser
-Slate.xcodeproj/project.xcworkspace/xcuserdata/jigish.xcuserdatad/
-Slate.xcodeproj/xcuserdata/jigish.xcuserdatad/
+*.mode1v3
+*.pbxuser
 # don't version xcode artifacts
 *.xcuserdatad
+*.xccheckout
 tmp
