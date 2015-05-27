@@ -30,6 +30,7 @@
 
 @property (strong) ScreenWrapper *sw;
 @property NSInteger screenId;
+@property (readonly) NSInteger displayId;
 
 - (id)initWithScreenId:(NSInteger)_id screenWrapper:(ScreenWrapper *)_sw;
 - (NSString *)toString;
