@@ -72,10 +72,7 @@
 - (Snapshot *)popSnapshot:(NSString *)name remove:(BOOL)remove;
 - (void)activateLayoutOrSnapshot:(NSString *)name;
 - (NSString *)stripComments:(NSString *)line;
-//- (void)processNotification:(id)notification;
 
 + (NSURL *)snapshotsFile;
 
 @end
-
-void onDisplayReconfiguration (CGDirectDisplayID display, CGDisplayChangeSummaryFlags flags, void *userInfo);

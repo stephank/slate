@@ -71,9 +71,11 @@ static SlateConfig *_instance = nil;
     [self setAliases:[NSMutableDictionary dictionary]];
     [self setSnapshots:[NSMutableDictionary dictionary]];
     
-    // Listen for screen change notifications with Quartz
-    CGDisplayRegisterReconfigurationCallback(onDisplayReconfiguration, (__bridge void *)(self));
-    //[nc addObserver:self selector:@selector(processNotification:) name:nil object:nil];
+    // Listen for screen change notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onScreenChange:)
+                                                 name:NSApplicationDidChangeScreenParametersNotification
+                                               object:nil];
   }
   return self;
 }
@@ -421,11 +423,6 @@ static SlateConfig *_instance = nil;
   return line;
 }
 
-/*- (void)processNotification:(id)notification {
-  SlateLogger(@"Notification: %@", notification);
-  SlateLogger(@"Notification Name: <%@>", [notification name]);
-}*/
-
 - (void)activateLayoutOrSnapshot:(id)name {
   if ([name isKindOfClass:[Operation class]]) {
     [name doOperation];
@@ -614,8 +611,3 @@ static SlateConfig *_instance = nil;
 }
 
 @end
-
-void onDisplayReconfiguration (CGDirectDisplayID display, CGDisplayChangeSummaryFlags flags, void *userInfo) {
-    SlateLogger(@"onDisplayReconfiguration");
-    [(__bridge id)userInfo onScreenChange:nil];
-}
