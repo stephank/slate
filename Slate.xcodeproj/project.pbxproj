@@ -50,7 +50,7 @@
 		3BA1BA6E162F51760026774E /* TestShellUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1BA6D162F51760026774E /* TestShellUtils.m */; };
 		3BA7485913B1D0F500CFA792 /* MathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7485813B1D0F500CFA792 /* MathUtils.m */; };
 		3BA85C9A16276DAB00FAAF0B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA85C9916276DAB00FAAF0B /* Sparkle.framework */; };
-		3BA85C9B16276E9E00FAAF0B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BA85C9916276DAB00FAAF0B /* Sparkle.framework */; };
+		3BA85C9B16276E9E00FAAF0B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3BA85C9916276DAB00FAAF0B /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3BADA37213A2C1ED009E21D8 /* AccessibilityWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BADA37113A2C1ED009E21D8 /* AccessibilityWrapper.m */; };
 		3BB5380413AEDA1B0005CFFC /* ScreenState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB5380313AEDA190005CFFC /* ScreenState.m */; };
 		3BBD24BA1580206C00940ABF /* default.slate in Resources */ = {isa = PBXBuildFile; fileRef = 3BBD24B91580206C00940ABF /* default.slate */; };
@@ -662,7 +662,7 @@
 		47C4A2861384E8890066B6DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0630;
 			};
 			buildConfigurationList = 47C4A2891384E8890066B6DE /* Build configuration list for PBXProject "Slate" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -873,6 +873,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
